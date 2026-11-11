@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+    install|upgrade)
+        echo "Removing previous content..."
+        rm -rf /usr/share/mythicos-upgrade-info/* || echo "Failed to remove old files."
+    ;;
+    abort-upgrade)
+    ;;
+esac
+
+exit 0
